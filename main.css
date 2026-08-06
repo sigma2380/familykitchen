@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+}
+#header {
+    padding: 0.5rem 1rem;
+    background-color: #d1874b;
+    border: 1px solid #a16635;
+}
+h1 {
+    display: inline;
+    font-family: "Edu SA Beginner", sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+}
+input {
+    border-radius: 2rem;
+    padding: .5rem;
+    border: 1px solid #a16635;
+    background-color: #ffc391;
+    vertical-align: top;
+    margin-top: 0.4rem;
+    font-family: "Edu SA Beginner", sans-serif;
+    font-size: large;
+}
