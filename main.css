@@ -1,24 +1,103 @@
 body {
     margin: 0px;
+    color: darkslategray;
+    font-family: "Telex", sans-serif;
+    letter-spacing: 0.1rem;
 }
-#header {
-    padding: 0.5rem 1rem;
-    background-color: #d1874b;
-    border: 1px solid #a16635;
-}
+
 h1 {
-    display: inline;
-    font-family: "Edu SA Beginner", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem .75rem;
+    border-bottom: 1px solid sandybrown;
+    background: sandybrown;
+    background: linear-gradient(132deg,sandybrown 0%, rgba(235, 190, 87, 1) 23%, rgba(252, 165, 111, 1) 50%, rgba(255, 164, 89, 1) 100%);
+    font-family: "Patrick Hand", sans-serif;
     letter-spacing: 0.2rem;
-    text-transform: lowercase;
 }
-input {
-    border-radius: 2rem;
-    padding: .5rem;
+
+h1>a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+h1>input {
+    margin-top: 0.3rem;
+    padding: .5rem 0.8rem;
     border: 1px solid #a16635;
-    background-color: #ffc391;
-    vertical-align: top;
-    margin-top: 0.4rem;
-    font-family: "Edu SA Beginner", sans-serif;
+    border-radius: 2rem;
+    background-color: #ffe7d3;
     font-size: large;
+        color: darkslategray;
+    font-family: "Telex", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+div#content {
+    margin: 1rem 1.5rem;
+}
+
+h2.group {
+    font-size: large;
+    font-family: "Kreon", sans-serif;
+    border-bottom: 1px solid #447492;
+    color: #447492;
+}
+
+h2.recipe {
+    display: block;
+    font-family: "Nothing You Could Do", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Kreon", sans-serif;
+    border-bottom: 1px solid #447492;
+    color: #447492;
+}
+
+a.tag {
+    display: inline-block;
+    padding: .5rem .75rem;
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+    border: 1px solid #a16635;
+    background-color: #ffe7d3;
+    color: #a16635;
+    font-weight: 800;
+    text-decoration: none;
+    transition-duration: 500ms;
+}
+
+a.tag:hover {
+    background-color: white;
+    transition-duration: 0ms;
+}
+
+ol#results {
+    font-family: "Telex", sans-serif;
+    color: #447492;
+}
+
+ol#results>li {
+        margin-top: 0.5rem;
+}
+ol#results>li>a {
+    text-decoration: none;
+    color: #447492;
+}
+
+ol#results>li>a:hover {
+    text-decoration: underline;
+}
+
+ul#ingredients>li {
+    margin-top: 0.5rem;
+}
+
+div#ftko {
+    font-family: "Nothing You Could Do", sans-serif;
+    text-align: center;
+    letter-spacing: 0rem;
 }
