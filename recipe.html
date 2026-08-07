@@ -1,14 +1,19 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Family Kitchen 3.0</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kreon&family=Nothing+You+Could+Do&family=Patrick+Hand&family=Telex&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
+        <script src="recipedata.js"></script>
+        <script src="recipe.js"></script>
     </head>
     <body>
-        <h1><a href="index.html">Family&nbsp;Kitchen</a> <input placeholder="search"></h1>
+        <h1><a href="index.html">Family&nbsp;Kitchen</a><form action="search.html"><input name="keyword" placeholder="search"></form></h1>
         <div id="content">
             <h2>Scott's Favorite Pancakes</h2>
             <h3>Ingredients</h3>
@@ -25,9 +30,9 @@
                 <li>Ladle about ¼ cup batter and cook.</li>
                 
             </ol>
-            <h3>Notes</h3>
-            Makes about 16 pancakes.<br>
-            <a class="smalltag" href="tag-search.html?tag=Breakfast">Breakfast</a>
+            <h3 id="notesheader">Notes</h3>
+            <div id="notes"></div>
+            <div id="tags"></div>            
             <div id="ftko">From the kitchen of Scott</div>
         </div>
     </body>

@@ -1,6 +1,6 @@
 @media (max-width: 600px) {
     html { 
-        font-size: 18px;
+        font-size: 12px;
     }
 }
 
@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,16 +29,16 @@ h1>a {
     color: darkslategray;
 }
 
-h1>input {
+input {
     margin-top: 0.3rem;
     padding: .5rem 0.8rem;
     border: 1px solid sandybrown;
     border-radius: 2rem;
     background-color: BlanchedAlmond;
     font-size: 1.2rem;
-    color: darkslategray;
+    color: inherit;
     font-family: "Telex", sans-serif;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0;
     width: 13.1rem;
 }
 
@@ -111,4 +112,11 @@ div#ftko {
     letter-spacing: -0.05rem;
     padding-top: 1rem;
     font-size: 0.9rem;
+}
+
+div.error {
+    text-align: center;
+    color: white;
+    background-color: maroon;
+    padding: 0.5rem;
 }
