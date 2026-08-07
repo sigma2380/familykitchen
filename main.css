@@ -1,3 +1,9 @@
+@media (max-width: 600px) {
+    html { 
+        font-size: 24px;
+    }
+}
+
 body {
     margin: 0px;
     color: darkslategray;
@@ -7,11 +13,11 @@ body {
 
 h1 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem .75rem;
     border-bottom: 1px solid sandybrown;
-    background: sandybrown;
     background: linear-gradient(132deg,sandybrown 0%, rgba(235, 190, 87, 1) 23%, rgba(252, 165, 111, 1) 50%, rgba(255, 164, 89, 1) 100%);
     font-family: "Patrick Hand", sans-serif;
     letter-spacing: 0.2rem;
@@ -25,63 +31,66 @@ h1>a {
 h1>input {
     margin-top: 0.3rem;
     padding: .5rem 0.8rem;
-    border: 1px solid #a16635;
+    border: 1px solid sandybrown;
     border-radius: 2rem;
-    background-color: #ffe7d3;
-    font-size: large;
-        color: darkslategray;
+    background-color: BlanchedAlmond;
+    font-size: 1.2rem;
+    color: darkslategray;
     font-family: "Telex", sans-serif;
     letter-spacing: 0.1rem;
+    width: 13.1rem;
 }
 
 div#content {
     margin: 1rem 1.5rem;
 }
 
-h2.group {
-    font-size: large;
-    font-family: "Kreon", sans-serif;
-    border-bottom: 1px solid #447492;
-    color: #447492;
-}
-
-h2.recipe {
-    display: block;
+h2 {
     font-family: "Nothing You Could Do", sans-serif;
     text-align: center;
 }
 
 h3 {
+    font-size: 1.2rem;
     font-family: "Kreon", sans-serif;
     border-bottom: 1px solid #447492;
     color: #447492;
+    margin: 0rem 0rem 1rem 0rem;
 }
 
-a.tag {
+a.tag, a.smalltag {
     display: inline-block;
-    padding: .5rem .75rem;
     border-radius: 2rem;
-    margin-right: 0.5rem;
     border: 1px solid #a16635;
-    background-color: #ffe7d3;
+    background-color: BlanchedAlmond;
     color: #a16635;
-    font-weight: 800;
     text-decoration: none;
     transition-duration: 500ms;
 }
 
-a.tag:hover {
+a.tag {
+    padding: .5rem .75rem;
+    margin: 0rem 0.5rem 1rem 0rem;
+    font-weight: 800;
+}
+a.smalltag {
+    padding: .25rem .5rem;
+    margin: 1rem 0.25rem 0rem 0rem;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+a.tag:hover, a.smalltag:hover {
     background-color: white;
     transition-duration: 0ms;
 }
 
 ol#results {
-    font-family: "Telex", sans-serif;
     color: #447492;
 }
 
 ol#results>li {
-        margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 ol#results>li>a {
     text-decoration: none;
@@ -92,12 +101,14 @@ ol#results>li>a:hover {
     text-decoration: underline;
 }
 
-ul#ingredients>li {
+ul#ingredients>li, ol#directions>li {
     margin-top: 0.5rem;
 }
 
 div#ftko {
     font-family: "Nothing You Could Do", sans-serif;
     text-align: center;
-    letter-spacing: 0rem;
+    letter-spacing: -0.05rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
 }
