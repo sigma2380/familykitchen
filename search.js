@@ -6,13 +6,13 @@ window.addEventListener("DOMContentLoaded", () =>
         var keyword = getSingleParameter("keyword");
 
         // ensure both are not populated
-        if (tag !== undefined && keyword !== undefined) {
-            displayError("Both tag and keyword specified");
+        if (tag !== null && keyword !== null) {
+            displayError(`Both tag and keyword specified ${tag} ${keyword}`);
             return;
         }
 
         // Try tag first
-        if (tag !== undefined)
+        if (tag !== null)
         {
             document.querySelector("h3").innerText = tag + " Tags";
             var results = "";
@@ -25,11 +25,12 @@ window.addEventListener("DOMContentLoaded", () =>
         }
 
         // Then try keyword
-        else if (keyword !== undefined) {
+        else if (keyword !== null) {
+            keyword = keyword.toLowerCase;
             document.querySelector("h3").innerText = "Search for: " + keyword;
             var results = "";
             for (const r of recipes) {
-                if (r.Categories.includes(keyword) || r.Ingredients.includes(keyword) || r.Instructions.includes(keyword) || r.Title.includes(keyword)) {
+                if (r.Categories.toLowerCase.includes(keyword) || r.Ingredients.toLowerCase.includes(keyword) || r.Instructions.toLowerCase.includes(keyword) || r.Title.toLowerCase.includes(keyword)) {
                     results += `<li><a href="recipe.html?id=${r.ID}">${r.Title}</a></li>`;
                 }
             }
