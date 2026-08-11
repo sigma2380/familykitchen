@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () =>
             document.querySelector("h3").innerText = tag + " Tags";
             var results = "";
             for (const r of recipes) {
-                if (r.Categories.includes(tag)) {
+                if (r.Categories !== undefined && r.Categories.includes(tag)) {
                     results += `<li><a href="recipe.html?id=${r.ID}">${r.Title}</a></li>`;
                 }
             }
@@ -26,11 +26,14 @@ window.addEventListener("DOMContentLoaded", () =>
 
         // Then try keyword
         else if (keyword !== null) {
-            keyword = keyword.toLowerCase;
+            keyword = keyword.toLowerCase();
             document.querySelector("h3").innerText = "Search for: " + keyword;
             var results = "";
             for (const r of recipes) {
-                if (r.Categories.toLowerCase.includes(keyword) || r.Ingredients.toLowerCase.includes(keyword) || r.Instructions.toLowerCase.includes(keyword) || r.Title.toLowerCase.includes(keyword)) {
+                if ((r.Categories !== undefined && r.Categories.toLowerCase().includes(keyword)) ||
+                    (r.Title !== undefined && r.Title.toLowerCase().includes(keyword)) ||
+                    (r.Ingredients !== undefined && r.Ingredients.toLowerCase().includes(keyword)) ||
+                    (r.Instructions !== undefined && r.Instructions.toLowerCase().includes(keyword))) {
                     results += `<li><a href="recipe.html?id=${r.ID}">${r.Title}</a></li>`;
                 }
             }

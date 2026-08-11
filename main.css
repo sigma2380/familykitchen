@@ -56,7 +56,7 @@ h3 {
     font-family: "Kreon", sans-serif;
     border-bottom: 1px solid #447492;
     color: #447492;
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 0.5rem 0rem;
 }
 
 a.tag, a.smalltag {
@@ -71,7 +71,8 @@ a.tag, a.smalltag {
 
 a.tag {
     padding: .5rem .75rem;
-    margin: 0rem 0.5rem 1rem 0rem;
+    margin: 0.5rem;
+    margin-left: 0;
     font-weight: 800;
 }
 a.smalltag {

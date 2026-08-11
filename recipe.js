@@ -18,16 +18,11 @@ window.addEventListener("DOMContentLoaded", () =>
 
         document.querySelector("h2").innerText = rec.Title;
         document.getElementById("ingredients").innerHTML = listToHTML(rec.Ingredients, "<li>", "</li>", "\n");
-        if (!rec.Notes) {
-            document.getElementById("notes").remove();
-            document.getElementById("notesheader").remove();
-        }
-        else
-        {
-            document.getElementById("notes").innerText = rec.Notes;
-        }
-        document.getElementById("tags").innerHTML = makeTags(rec.Categories);
         document.getElementById("directions").innerHTML = listToHTML(rec.Instructions, "<li>", "</li>", "\n");
+        var footer = makeFooter(rec);
+        if (footer !== "") {
+            document.getElementById("footer").innerHTML = "<h3>Notes</h3>" + footer;
+        }
     }
 );
 
@@ -36,8 +31,31 @@ function listToHTML(list, startTag, endTag, delimiter) {
     return startTag + listArray.join(endTag + startTag) + endTag;
 }
 
+function makeFooter(rec) {
+    var footer = "";
+    if (rec.Notes !== undefined) {
+        footer += "<div id='notes'>" + rec.Notes + "</div>";
+    }
+    if (rec.PrepTime !== undefined) {
+        footer += "<div id='preptime'>Prep Time: " + rec.PrepTime + "</div>";
+    }
+    if (rec.CookTime !== undefined) {
+        footer += "<div id='cooktime'>Cook Time: " + rec.CookTime + "</div>";
+    }
+    if (rec.ServingSize !== undefined) {
+        footer += "<div id='servingsize'>Serving Size: " + rec.ServingSize + "</div>";
+    }
+    if (rec.Categories !== undefined) {
+        footer += makeTags(rec.Categories);
+    }
+    if (rec.Author !== undefined) {
+        footer += "<div id='ftko'>From the kitchen of " + rec.Author + "</div>";
+    }
+    return footer;
+}
+
 function makeTags(list) {
-    const listArray = list.split("\n").filter(Boolean);
+    const listArray = list.split(" ").filter(Boolean);
     var html = "";
     listArray.forEach(label => {
         html += `<a href='search.html?tag=${label}' class='smalltag'>${label}</a>`;
